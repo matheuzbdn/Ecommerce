@@ -36,7 +36,7 @@
 
     <section class="home">
         <div class="home-img">
-            <img src="imagens/product1.png" class="one">
+            <img src="product1.png" class="one">
         </div>
 
         <div class="home-text">
@@ -47,6 +47,36 @@
         </div>
 
     </section>
+
+    <div class="main">
+        <div class="row">
+            <li><img src="main1.png" onclick="slider('product1.png')"></li>
+        </div>
+
+        <div class="row2">
+            <li><img src="main2.png" onclick="slider('product2.png')"></li>
+        </div>
+
+        <div class="row3">
+            <li><img src="main3.png" onclick="slider('product3.png')"></li>
+        </div>
+    </div>
+
+
+
+    <script>
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+        let menu = document.querySelector ('#menu-icon');
+        let navbar = document.querySelector ('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        }
+    </script>
     
 </body>
 </html>
